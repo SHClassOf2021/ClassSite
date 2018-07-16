@@ -1,0 +1,31 @@
+<div>
+    <h1>
+        Announcements
+    </h1>
+</div>
+
+{% if latest_announcements_all %}
+    <div>
+    {% for announcement in latest_announcements_all %}
+        <h2>
+            {{ announcement.title_text }}
+        </h2>
+        <p>
+            {{ announcement.body_text }}
+        </p>
+        <p id="pub_date">
+            {{ announcement.pub_date }}
+        </p>
+    {% endfor %}
+    </div>
+{% else %}
+    <div>
+        <p>We have no current announcements.</p>
+    </div>
+{% endif %}
+
+<div class="button">
+    <div>
+        <a href="{% url 'index' %}">Home</a>
+    </div>
+</div>
