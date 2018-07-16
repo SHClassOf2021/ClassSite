@@ -5,8 +5,8 @@ from .models import Announcement
 # Create your views here.
 
 def index(request):
-    latest_announcement_list = Announcement.objects.order_by('-pub_date')[:4]
+    latest_announcements = Announcement.objects.order_by('-pub_date')[:3]
     context = {
-        'latest_announcement_list' : latest_announcement_list,
+        'latest_announcements':latest_announcements,
     }
-    return (request, 'home/index.html', context)
+    return render(request, 'home/index.html', context)

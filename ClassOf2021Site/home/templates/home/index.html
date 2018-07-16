@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shepherd Hill Class of 2021</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="" alt="ram">
+            <p class="title">Shepherd Hill Class of 2021</p>
+            <img src="" alt="ram">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="announcements">
+            <p id="announcements">
+                Announcements
+            </p>
+        </div>
+        <div>
+            <div>
+                <img src="" alt="">
+            </div>
+            <div>
+                <!-- Announcements -->
+                {% if latest_announcements %}
+                    <div>
+                    {% for announcement in latest_announcements %}
+                        <h2>
+                            {{ announcement.title_text }}
+                        </h2>
+                        <p>
+                            {{ announcement.body_text }}
+                        </p>
+                        <p id="pub_date">
+                            {{ announcement.pub_date }}
+                        </p>
+                    {% endfor %}
+                    </div>
+                {% else %}
+                    <div>
+                        <p>We have no current announcements.</p>
+                    </div>
+                {% endif %}
+            </div>
+            <div>
+                <img src="" alt="">
+            </div>
+        </div>
+    </section>
+    <footer>
+        Designed for the Class of 2021
+    </footer>
+</body>
+</html>
