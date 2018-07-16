@@ -6,6 +6,8 @@
 
 body {
     font-family: 'Reem Kufi', sans-serif;
+    font-size: 16px;
+    background: #C4C4C4;
 }
 
 header {
@@ -64,4 +66,55 @@ nav a {
 nav a:hover {
     background: #b8b8b8;
     box-shadow: 2px 2px 4px #000000;
+}
+
+.announcements1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 6.5em 2em 3em 2em;
+}
+
+.announcements {
+    background: #800000;
+    padding: 8px 54px;
+    font-size: 32px;
+    color: #C98A28;
+    text-shadow: 2px 2px 6px #000000;
+    /* box-shadow: 2px 2px 6px #000000; */
+    border-radius: 10px;
+}
+
+.main {
+    display: grid;
+    grid-template-areas: "a . b . c";
+    grid-template-columns: 1fr .5fr 1.5fr .5fr 1fr;
+}
+
+.sideLeft {
+    grid-area: a;
+}
+
+.announcementArea {
+    grid-area: b;
+    text-align: left;
+    background: #959595;
+    padding: 2em;
+}
+
+.sideRight {
+    grid-area: c;
+}
+
+#footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background: #888888;
+    color: black;
+    font-size: 18px;
+    padding: .35rem;
 }
