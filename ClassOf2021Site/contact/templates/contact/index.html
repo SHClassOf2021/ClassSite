@@ -1,1 +1,74 @@
-<p>Hello</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 900px)" href="{% static 'contact/styleWide.css' %}">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 900px)" href="{% static 'contact/styleMobile.css' %}">
+    <title>Contact Your Officers</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="{% static 'home/Ram.jpg' %}" alt="ram" class="RamImageLeft">
+        </div>
+        <div>
+            <p class="title">Shepherd Hill Class of 2021</p>
+        </div>
+        <div>
+            <img src="{% static 'home/Ram.jpg' %}" alt="ram" class="RamImageRight">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'home:index' %}">Home</a></li>
+            <li><a href="">Pictures</a></li>
+            <li><a href="">My Dues</a></li>
+            <li><a href="">Calendar</a></li>
+            <li><a href="">Important Events</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="announcements1">
+            <div class="announcements">
+                Your Class Officers
+            </div>
+        </div>
+        <div class="main">
+            <div class="announcementArea">
+                <!-- Announcements -->
+                {% if list_of_officers %}
+                <br>
+                    <div>
+                    {% for officer in list_of_officers %}
+                        <div id="announcementBlock">
+                            <h2 id="title">
+                                {{ officer.officer_position }}
+                            </h2>
+                            <p id="fullName">
+                                {{ officer.first_name }} {{ officer.last_name }}
+                            </p>
+                            <p id="body">
+                                {{ officer.email }}
+                            </p>
+                            <p id="body">
+                                {{ officer.phone_number }}
+                            </p>
+                        </div>
+                        <br>
+                    {% endfor %}
+                    </div>
+                {% else %}
+                    <div>
+                        <p>We have no current officers.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>
