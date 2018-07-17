@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
     <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Shepherd Hill Class of 2021</title>
@@ -37,23 +38,24 @@
             </div>
         </div>
         <div class="main">
-            <div class="sideLeft">
-                <!-- side images -->
-            </div>
             <div class="announcementArea">
                 <!-- Announcements -->
                 {% if latest_announcements %}
+                <br>
                     <div>
                     {% for announcement in latest_announcements %}
-                        <h2>
-                            {{ announcement.title_text }}
-                        </h2>
-                        <p>
-                            {{ announcement.body_text }}
-                        </p>
-                        <p id="pub_date">
-                            {{ announcement.pub_date }}
-                        </p>
+                        <div id="announcementBlock">
+                            <h2 id="title">
+                                {{ announcement.title_text }}
+                            </h2>
+                            <p id="pub_date">
+                                {{ announcement.pub_date }}
+                            </p>
+                            <p id="body">
+                                {{ announcement.body_text }}
+                            </p>
+                        </div>
+                        <br>
                     {% endfor %}
                     </div>
                 {% else %}
@@ -61,15 +63,9 @@
                         <p>We have no current announcements.</p>
                     </div>
                 {% endif %}
-                <a href="{% url 'home:announcements' %}">View all announcements</a>
-            </div>
-            <div class="sideRight">
-                <!-- side images -->
+                <a href="{% url 'home:announcements' %}" id="announcementsLink">View all announcements <i class="fas fa-chevron-right"></i></a>
             </div>
         </div>
     </section>
-    <div id="footer">
-        Designed for the Class of 2021
-    </div>
 </body>
 </html>

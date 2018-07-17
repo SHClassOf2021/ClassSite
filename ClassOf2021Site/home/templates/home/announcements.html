@@ -1,31 +1,46 @@
-<div>
-    <h1>
-        Announcements
-    </h1>
-</div>
-
-{% if latest_announcements_all %}
-    <div>
-    {% for announcement in latest_announcements_all %}
-        <h2>
-            {{ announcement.title_text }}
-        </h2>
-        <p>
-            {{ announcement.body_text }}
-        </p>
-        <p id="pub_date">
-            {{ announcement.pub_date }}
-        </p>
-    {% endfor %}
-    </div>
-{% else %}
-    <div>
-        <p>We have no current announcements.</p>
-    </div>
-{% endif %}
+<head>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}">
+</head>
 
 <div class="button">
-    <div>
-        <a href="{% url 'home:index' %}">Home</a>
+    <span id="home">
+        <a href="{% url 'home:index' %}"><i class="fas fa-chevron-left"></i> Back</a>
+    </span>
+</div>
+
+<div class="announcements2">
+    <div class="announcements0">
+        Announcements
+    </div>
+</div>
+
+<div class="main">
+    <div class="announcementArea">
+        {% if latest_announcements_all %}
+                <div>
+                {% for announcement in latest_announcements_all %}
+                <br>
+                    <div id="announcementBlock">
+                        <h2>
+                            {{ announcement.title_text }}
+                        </h2>
+                        <p id="pub_date">
+                            {{ announcement.pub_date }}
+                        </p>
+                        <p>
+                            {{ announcement.body_text }}
+                        </p>
+                    </div>
+                    <br>
+                {% endfor %}
+                </div>
+        {% else %}
+            <div>
+                <p>We have no current announcements.</p>
+            </div>
+        {% endif %}
     </div>
 </div>
