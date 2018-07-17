@@ -33,19 +33,19 @@
         </ul>
     </nav>
     <section>
-        <div class="announcements1">
-            <div class="announcements">
+        <div class="officers1">
+            <div class="officers">
                 Your Class Officers
             </div>
         </div>
         <div class="main">
-            <div class="announcementArea">
+            <div class="officerArea">
                 <!-- Announcements -->
                 {% if list_of_officers %}
                 <br>
                     <div>
                     {% for officer in list_of_officers %}
-                        <div id="announcementBlock">
+                        <div id="officerBlock">
                             <h2 id="title">
                                 {{ officer.officer_position }}
                             </h2>
