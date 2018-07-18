@@ -12,6 +12,7 @@
     <title>Contact Your Officers</title>
 </head>
 <body>
+    {% if user.is_authenticated %}
     <header>
         <div>
             <img src="{% static 'home/Ram.jpg' %}" alt="ram" class="RamImageLeft">
@@ -24,8 +25,8 @@
         </div>
     </header>
     <div class="box">
-        <div id="a"><p>Hi</p></div>
-        <div id="b"><a href="">Log out <i class="fas fa-sign-out-alt"></i></a></div>
+        <div id="a"><p>Hi {{ user.username }}</p></div>
+        <div id="b"><a href="{% url 'logout' %}">Log out <i class="fas fa-sign-out-alt"></i></a></div>
     </div>
     <nav>
         <ul>
@@ -74,5 +75,9 @@
             </div>
         </div>
     </section>
+    {% else %}
+        <p><a href="{% url 'signup' %}">Sign Up</a></p>
+        <p><a href="{% url 'login' %}">Log In </a></p>
+    {% endif %}
 </body>
 </html>
