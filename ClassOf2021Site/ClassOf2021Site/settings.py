@@ -39,13 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home',
     'contact',
-    'users',
 ]
-
-AUTH_USER_MODEL = 'users.CustomUser'
-
-LOGIN_REDIRECT_URL = 'home:index'
-LOGOUT_REDIRECT_URL = 'home:index'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
