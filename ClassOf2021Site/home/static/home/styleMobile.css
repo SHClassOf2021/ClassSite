@@ -196,3 +196,31 @@ nav a:hover {
     color: black;
     font-weight: bold;
 }
+
+.GoogleButton {
+    background: white;
+    padding: 8px 20px;
+    position: absolute;
+    top: 50%;
+    transform: scale(1.5);
+    border: 1px solid black;
+    border-radius: 2px;
+}
+
+#logo {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: 5px;
+}
+
+#loginLink {
+    text-decoration: none;
+    color: black;
+}
+
+.loginButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

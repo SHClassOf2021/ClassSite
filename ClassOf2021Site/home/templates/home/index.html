@@ -26,8 +26,8 @@
         </div>
     </header>
     <div class="box">
-        <div id="a"><p>Hi {{ user.username }}</p></div>
-        <div id="b"><a href="{% url 'account_logout' %}">Log out <i class="fas fa-sign-out-alt"></i></a></div>
+        <div id="a"><p>Hi, {{ user.username }}</p></div>
+        <div id="b"><a href="{% url 'logout' %}">Log out <i class="fas fa-sign-out-alt"></i></a></div>
     </div>
     <nav>
         <ul>
@@ -75,7 +75,25 @@
         </div>
     </section>
     {% else %}
-        <p><a href="{% provider_login_url 'google' %}">Log In with Gmail</a></p>
+    <header>
+        <div>
+            <img src="{% static 'home/Ram.jpg' %}" alt="ram" class="RamImageLeft">
+        </div>
+        <div>
+            <p class="title">Shepherd Hill Class of 2021</p>
+        </div>
+        <div>
+            <img src="{% static 'home/Ram.jpg' %}" alt="ram" class="RamImageRight">
+        </div>
+    </header>
+    <div class="loginButton">
+        <span class="GoogleButton">
+            <a href="{% provider_login_url 'google' %}" id="loginLink">
+                <img id="logo" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
+                 Login with Google
+            </a>
+        </span>
+    </div>
     {% endif %}
 </body>
 </html>
