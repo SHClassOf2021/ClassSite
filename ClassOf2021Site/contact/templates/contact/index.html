@@ -12,6 +12,7 @@
     <title>Contact Your Officers</title>
 </head>
 <body>
+    {% load socialaccount %}
     {% if user.is_authenticated %}
     <header>
         <div>
@@ -26,7 +27,7 @@
     </header>
     <div class="box">
         <div id="a"><p>Hi {{ user.username }}</p></div>
-        <div id="b"><a href="{% url 'logout' %}">Log out <i class="fas fa-sign-out-alt"></i></a></div>
+        <div id="b"><a href="{% url 'account_logout' %}">Log out <i class="fas fa-sign-out-alt"></i></a></div>
     </div>
     <nav>
         <ul>
@@ -76,8 +77,7 @@
         </div>
     </section>
     {% else %}
-        <p><a href="{% url 'signup' %}">Sign Up</a></p>
-        <p><a href="{% url 'login' %}">Log In </a></p>
+        <p><a href="{% provider_login_url 'google' %}">Log In with Gmail</a></p>
     {% endif %}
 </body>
 </html>
