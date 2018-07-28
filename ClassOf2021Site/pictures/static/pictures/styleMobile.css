@@ -100,55 +100,31 @@ nav a:hover {
     background: #b8b8b8;
     box-shadow: 2px 2px 4px #000000;
 }
-
-.officers1 {
-    position: relative;
+/*  */
+.pictures {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 3em 2em 3em 2em;
+    flex-direction: column;
+    margin: 1em 1em 1em 1em;
 }
 
-.officers {
-    background: #800000;
-    padding: 8px 54px;
-    font-size: 32px;
-    color: #C98A28;
-    text-shadow: 2px 2px 6px #000000;
-    border-radius: 10px;
+.albumLink {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 8px 20px;
 }
 
-.main {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.officerArea {
-    text-align: left;
+.albumLinkDiv {
+    text-align: center;
     background: #959595;
-}
-
-
-#officerBlock {
     padding: 1em;
+    border-radius: 5px;
 }
 
-#officerBlock:hover {
+.albumLinkDiv:hover {
     background: #b8b8b8;
 }
-
-#fullName {
-    font-size: 22px;
-}
-
-#title {
-    font-size: 28px;
-}
-
-#body {
-    font-size: 18px;
-}
-
+/*  */
 .GoogleButton {
     background: white;
     padding: 8px 20px;

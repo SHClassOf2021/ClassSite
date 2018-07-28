@@ -32,7 +32,7 @@
     <nav>
         <ul>
             <li><a href="{% url 'home:index' %}">Home</a></li>
-            <li><a href="">Pictures</a></li>
+            <li><a href="{% url 'pictures:index' %}">Pictures</a></li>
             <li><a href="">My Dues</a></li>
             <li><a href="">Calendar</a></li>
             <li><a href="">Important Events</a></li>
@@ -77,14 +77,14 @@
         </div>
     </section>
     {% else %}
-    <div class="loginButton">
-        <span class="GoogleButton">
-            <a href="{% provider_login_url 'google' %}" id="loginLink">
-                <img id="logo" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
-                 Login with Google
-            </a>
-        </span>
-    </div>
+    <a href="{% provider_login_url 'google' %}" id="loginLink">
+        <div class="loginButton">
+            <span class="GoogleButton">
+                    <img id="logo" alt="Google &quot;G&quot; Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"/>
+                     Login with Google
+            </span>
+        </div>
+    </a>
     {% endif %}
 </body>
 </html>

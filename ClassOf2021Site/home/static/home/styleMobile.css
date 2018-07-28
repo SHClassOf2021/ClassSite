@@ -76,7 +76,7 @@ nav ul {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    margin-top: 18vh;
+    margin-top: 13vh;
 }
 
 nav ul li {
@@ -174,7 +174,6 @@ nav a:hover {
 .announcementArea {
     text-align: left;
     background: #959595;
-    padding: 1em;
 }
 
 #title {

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'home',
     'contact',
     'users',
+    'pictures',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
