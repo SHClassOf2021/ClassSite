@@ -48,12 +48,20 @@ INSTALLED_APPS = [
     'contact',
     'users',
     'pictures',
+    'dues',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
 
 LOGIN_REDIRECT_URL = 'home:index'
 LOGOUT_REDIRECT_URL = 'home:index'
+
+ACCOUNT_AUTHENTICATION_METHOD = "email" # Defaults to username_email
+ACCOUNT_USERNAME_REQUIRED = False       # Defaults to True
+ACCOUNT_EMAIL_REQUIRED = True           # Defaults to False
+SOCIALACCOUNT_QUERY_EMAIL = ACCOUNT_EMAIL_REQUIRED
+SOCIALACCOUNT_AUTO_SIGNUP = True
+SOCIALACCOUNT_EMAIL_REQUIRED = False
 
 AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
@@ -64,6 +72,10 @@ SITE_ID = 1
 
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
         'AUTH_PARAMS': {
             'access_type': 'online',
             'hd': 'dcrsd.org'

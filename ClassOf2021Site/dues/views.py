@@ -1,7 +1,6 @@
 from django.shortcuts import render
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
-from django.contrib.auth.models import User
 
 # Create your views here.
 
@@ -15,7 +14,7 @@ wks = gc.open('Class of 2021 Student E-mails and Dues').sheet1
 sheet1 = wks.get_all_records()
 
 def index(request):
-    user_email = User.objects.email
+    user_email = None
     # user = wks.find(user_email)
 
     return render(request, 'dues/index.html')
