@@ -101,6 +101,11 @@ nav a:hover {
     box-shadow: 2px 2px 4px #000000;
 }
 
+#back {
+    text-decoration: none;
+    color: black;
+}
+
 .button {
     display: flex;
     align-items: center;
@@ -117,11 +122,6 @@ nav a:hover {
 
 #home:hover {
     background: #C98A28;
-}
-
-#home a {
-    text-decoration: none;
-    color: black;
 }
 
 .announcements1 {
