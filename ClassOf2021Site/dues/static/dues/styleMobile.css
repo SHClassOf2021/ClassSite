@@ -130,3 +130,55 @@ nav a:hover {
 }
 
 /* Per page styles */
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 2em 3em 2em;
+}
+
+.headerWords {
+    background: #800000;
+    padding: 8px 54px;
+    font-size: 32px;
+    color: #C98A28;
+    text-shadow: 2px 2px 6px #000000;
+    border-radius: 10px;
+}
+
+.duesAnnouncement {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.announcement {
+    background: #C98A28;
+    padding: 1em;
+    text-align: center;
+    display: grid;
+    grid-template-columns: .25fr 1fr .25fr;
+}
+
+.dues {
+    display: grid;
+    grid-template-areas: ". a .";
+    grid-template-columns: .25fr 3fr .25fr;
+}
+
+.duesArea {
+    grid-area: a;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    background: #959595;
+    padding: 1em;
+}
+
+.grade {
+    padding: 1em;
+}
+
+.grade:hover {
+    background: #b8b8b8;
+}
