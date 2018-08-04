@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen and (min-width: 900px)" href="{% static 'dues/styleWide.css' %}">
     <link rel="stylesheet" type="text/css" media="screen and (max-width: 900px)" href="{% static 'dues/styleMobile.css' %}">
-    <title>My Dues</title>
+    <title>Calendar</title>
 </head>
 <body>
     {% load socialaccount %}
@@ -33,8 +33,8 @@
         <ul>
             <li><a href="{% url 'contact:home' %}">Contact Your Officers</a></li>
             <li><a href="{% url 'pictures:index' %}">Pictures</a></li>
+            <li><a href="{% url 'dues:index' %}">My Dues</a></li>
             <li><a href="{% url 'home:index' %}">Home</a></li>
-            <li><a href="{% url 'home:index' %}">Calendar</a></li>
             <li><a href="">Important Events</a></li>
         </ul>
     </nav>

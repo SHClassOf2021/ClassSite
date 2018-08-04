@@ -9,3 +9,6 @@ class Event(models.Model):
     end_time = models.TimeField()
     location = models.CharField(max_length=100)
     more_info = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name
