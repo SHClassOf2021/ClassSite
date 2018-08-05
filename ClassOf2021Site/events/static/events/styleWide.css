@@ -128,8 +128,6 @@ nav a:hover {
     align-items: center;
 }
 
-/* Per page styles */
-
 .header {
     position: relative;
     display: flex;
@@ -146,4 +144,26 @@ nav a:hover {
     text-shadow: 2px 2px 6px #000000;
     /* box-shadow: 2px 2px 6px #000000; */
     border-radius: 10px;
+}
+
+/* Per page styles */
+
+.events {
+    display: grid;
+    grid-template-columns: .5fr 3fr .5fr;
+    grid-template-areas: ". a .";
+    grid-gap: 1em;
+    margin-bottom: 2em;
+}
+
+.eventArea {
+    grid-area: a;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+.event {
+    background: #959595;
+    padding: 1em;
 }

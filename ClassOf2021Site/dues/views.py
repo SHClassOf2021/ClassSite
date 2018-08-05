@@ -22,6 +22,7 @@ EmailColumn = wks.col_values(1)
 def index(request):
     email = request.user.email
     announcement = Dues.objects.all()
+    username = request.user.username
     i = 0
     for i in range(len(EmailColumn)):
         if str(EmailColumn[i]) == email:

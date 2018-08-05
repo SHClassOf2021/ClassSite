@@ -7,8 +7,8 @@
     {% load static %}
     <link href="https://fonts.googleapis.com/css?family=Reem+Kufi" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen and (min-width: 900px)" href="{% static 'dues/styleWide.css' %}">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 900px)" href="{% static 'dues/styleMobile.css' %}">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 900px)" href="{% static 'events/styleWide.css' %}">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 900px)" href="{% static 'events/styleMobile.css' %}">
     <title>Calendar</title>
 </head>
 <body>
@@ -40,12 +40,26 @@
     </nav>
     <div class="header">
         <div class="headerWords">
-            Events
+            Upcoming Events
         </div>
     </div>
-
-
-
+    {% if events %}
+    <section class="events">
+        <div class="eventArea">
+            {% for event in events %}
+            <div class="event">
+                <h1>{{ event.name }}</h1>
+                <p class="date"><b>Date:</b> {{ event.date }}</p>
+                <p class="start"><b>Start:</b> {{ event.start_time }}</p>
+                <p class="end"><b>End:</b> {{ event.end_time }}</p>
+                <p class="location"><b>Location:</b> {{ event.location }}</p>
+                <p class="info">{{ event.more_info }}</p>
+                <a href="{{ event.website }}">{{ event.website }}</a>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    {% endif %}
     {% else %}
     <header>
         <div>

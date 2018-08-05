@@ -129,8 +129,6 @@ nav a:hover {
     align-items: center;
 }
 
-/* Per page styles */
-
 .header {
     position: relative;
     display: flex;
@@ -146,4 +144,25 @@ nav a:hover {
     color: #C98A28;
     text-shadow: 2px 2px 6px #000000;
     border-radius: 10px;
+}
+
+/* Per page styles */
+
+.events {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.eventArea {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em;
+}
+
+.event {
+    background: #959595;
+    padding: 1em;
 }

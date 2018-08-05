@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Officer(models.Model):
-    officer_position = models.CharField("Officer Posistion", max_length=100)
+    officer_position = models.CharField("Officer Position", max_length=100)
     first_name = models.CharField("First Name", max_length=100)
     last_name = models.CharField("Last Name", max_length=100)
     email = models.EmailField("E-mail", max_length=300)
