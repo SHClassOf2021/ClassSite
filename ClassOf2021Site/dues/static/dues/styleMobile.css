@@ -68,7 +68,7 @@ header {
 nav {
     padding: .5em;
     background: #C98A28;
-    height: 85vh ;
+    height: 78vh ;
 }
 
 nav ul {
@@ -76,7 +76,7 @@ nav ul {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    margin-top: 13vh;
+    margin-top: 6vh;
 }
 
 nav ul li {
@@ -91,6 +91,7 @@ nav a {
     background: #C4C4C4;
     text-decoration: none;
     font-size: 18px;
+    text-align: center;
     color: black;
     word-wrap: normal;
     box-shadow: 2px 2px 6px #000000;
