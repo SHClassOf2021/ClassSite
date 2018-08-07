@@ -45,32 +45,34 @@
             </div>
         </div>
         <div class="main">
-            <div class="announcementArea">
-                <!-- Announcements -->
-                {% if latest_announcements %}
-                <br>
-                    <div>
-                    {% for announcement in latest_announcements %}
-                        <div id="announcementBlock">
-                            <h2 id="title">
-                                {{ announcement.title_text }}
-                            </h2>
-                            <p id="pub_date">
-                                {{ announcement.pub_date }}
-                            </p>
-                            <p id="body">
-                                {{ announcement.body_text }}
-                            </p>
+            <div>
+                <div class="announcementArea">
+                    <!-- Announcements -->
+                    {% if latest_announcements %}
+                    <br>
+                        <div>
+                        {% for announcement in latest_announcements %}
+                            <div id="announcementBlock">
+                                <h2 id="title">
+                                    {{ announcement.title_text }}
+                                </h2>
+                                <p id="pub_date">
+                                    {{ announcement.pub_date }}
+                                </p>
+                                <p id="body">
+                                    {{ announcement.body_text }}
+                                </p>
+                            </div>
+                            <br>
+                        {% endfor %}
                         </div>
-                        <br>
-                    {% endfor %}
-                    </div>
-                {% else %}
-                    <div>
-                        <p>We have no current announcements.</p>
-                    </div>
-                {% endif %}
-                <a href="{% url 'home:announcements' %}" id="announcementsLink">View all announcements <i class="fas fa-chevron-right"></i></a>
+                    {% else %}
+                        <div>
+                            <p>We have no current announcements.</p>
+                        </div>
+                    {% endif %}
+                    <a href="{% url 'home:announcements' %}" id="announcementsLink">View all announcements <i class="fas fa-chevron-right"></i></a>
+                </div>
             </div>
             <div class="twitter">
                 <a class="twitter-timeline" data-width="280" data-height="676" data-link-color="#800000" href="https://twitter.com/SHClassOf2021?ref_src=twsrc%5Etfw">Tweets by SHClassOf2021</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
