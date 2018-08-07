@@ -26,4 +26,5 @@ urlpatterns = [
     path('pictures/', include('pictures.urls')),
     path('dues/', include('dues.urls')),
     path('events/', include('events.urls')),
+    path('important/', include('important.urls')),
 ]

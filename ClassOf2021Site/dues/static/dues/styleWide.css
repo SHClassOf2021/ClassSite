@@ -146,6 +146,7 @@ nav a:hover {
     text-shadow: 2px 2px 6px #000000;
     /* box-shadow: 2px 2px 6px #000000; */
     border-radius: 10px;
+    text-align: center;
 }
 
 .duesAnnouncement {
