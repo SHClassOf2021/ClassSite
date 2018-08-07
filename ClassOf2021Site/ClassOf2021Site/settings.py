@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'pictures',
     'dues',
     'events',
+    'important',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser'
