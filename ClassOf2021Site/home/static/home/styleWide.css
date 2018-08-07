@@ -167,8 +167,13 @@ nav a:hover {
 
 .main {
     display: grid;
-    grid-template-areas: ". c .";
+    grid-template-areas: "d c .";
     grid-template-columns: 1fr 1.5fr 1fr;
+}
+
+.twitter {
+    grid-area: d;
+    margin-left: 5em;
 }
 
 .announcementArea {
