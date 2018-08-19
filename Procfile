@@ -1,1 +1,1 @@
-web: gunicorn ClassOf2021Site.wsgi.application --log-file -
+web: gunicorn db.sqlite3 --log-file -
