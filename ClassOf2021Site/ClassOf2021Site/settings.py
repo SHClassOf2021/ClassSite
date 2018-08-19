@@ -26,7 +26,8 @@ SECRET_KEY = '3_x#ka_=#81po^l5392xrh)!!gw74duw_eo8e!+5t2=v(@ys=a'
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '127.0.0.1'
+    '127.0.0.1',
+    'localhost:8000'
 ]
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
@@ -34,6 +35,7 @@ SECURE_BROWSER_XSS_FILTER = True
 SECURE_SSL_REDIRECT = True
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
+
 # Application definition
 
 INSTALLED_APPS = [
