@@ -1,1 +1,1 @@
-web: gunicorn helloworld.wsgi --log-file -
+web: gunicorn ClassOf2021Site.wsgi.application --log-file -
