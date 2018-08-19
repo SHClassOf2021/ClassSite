@@ -27,12 +27,11 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '3_x#ka_=#81po^l5392xrh)!!gw74d
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', False))
 
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'https://classof2021site.herokuapp.com/',
 ]
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
@@ -133,23 +132,23 @@ WSGI_APPLICATION = 'ClassOf2021Site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
-
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'mysql.connector.django',
-#         'NAME': 'shclassof2021',
-#         'USER': 'ClassOf2021Admin',
-#         'PASSWORD': 'ShepHillRams2021',
-#         'HOST': 'localhost',
-#         'PORT': '',
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'mysql.connector.django',
+        'NAME': 'shclassof2021',
+        'USER': 'ClassOf2021Admin',
+        'PASSWORD': 'ShepHillRams2021',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
 
 # Password validation
