@@ -24,27 +24,9 @@ SECRET_KEY = '3_x#ka_=#81po^l5392xrh)!!gw74duw_eo8e!+5t2=v(@ys=a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-ALLOWED_HOSTS = []
-=======
 
 ALLOWED_HOSTS = []
 
-
->>>>>>> parent of 30eed33... Before Heroku upload
-=======
-ALLOWED_HOSTS = [
-    '127.0.0.1'
-]
-
-SECURE_CONTENT_TYPE_NOSNIFF = True
-SECURE_BROWSER_XSS_FILTER = True
-SECURE_SSL_REDIRECT = True
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
->>>>>>> parent of d0184f1... Heroku 1
 # Application definition
 
 INSTALLED_APPS = [
