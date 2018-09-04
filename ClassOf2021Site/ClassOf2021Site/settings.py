@@ -139,7 +139,7 @@ DATABASES = {
         'NAME': 'shclassof2021',
         'USER': 'ClassOf2021Admin',
         'PASSWORD': 'ShepHillRams2021',
-        'HOST': 'production',
+        'HOST': 'classsite2021.herokuapp.com',
         'PORT': '',
     }
 }
