@@ -139,7 +139,7 @@ DATABASES = {
         'NAME': 'shclassof2021',
         'USER': 'ClassOf2021Admin',
         'PASSWORD': 'ShepHillRams2021',
-        'HOST': 'localhost',
+        'HOST': 'production',
         'PORT': '',
     }
 }
