@@ -1,1 +1,1 @@
-web: gunicorn ClassOf2021Site:application
+web: gunicorn ClassOf2021Site:WSGI_APPLICATION
