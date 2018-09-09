@@ -1,1 +1,1 @@
-web: gunicorn ClassOf2021Site:app
+web: gunicorn ClassOf2021Site:application
