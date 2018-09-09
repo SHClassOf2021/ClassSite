@@ -30,7 +30,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 SECRET_KEY = os.environ['SECRET_KEY']
-DEBUG = os.environ['DEBUG', default=False, cast=bool]
+DEBUG = os.environ['DEBUG']
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ['DATABASE_URL']
