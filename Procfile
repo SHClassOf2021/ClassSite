@@ -1,1 +1,1 @@
-web: gunicorn ClassOf2021Site:WSGI_APPLICATION
+"web: python ClassOf2021Site.py" 
