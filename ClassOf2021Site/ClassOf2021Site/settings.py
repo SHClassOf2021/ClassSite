@@ -143,16 +143,16 @@ WSGI_APPLICATION = 'ClassOf2021Site.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'mysql.connector.django',
-        'NAME': 'shclassof2021',
-        'USER': 'ClassOf2021Admin',
-        'PASSWORD': 'ShepHillRams2021',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mysql.connector.django',
+#         'NAME': 'shclassof2021',
+#         'USER': 'ClassOf2021Admin',
+#         'PASSWORD': 'ShepHillRams2021',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 
 # Password validation
