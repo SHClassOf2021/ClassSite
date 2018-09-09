@@ -1,1 +1,1 @@
-"web: python ClassOf2021Site.py" 
+web: python ClassOf2021Site.py
