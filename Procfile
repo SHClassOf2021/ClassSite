@@ -1,1 +1,1 @@
-web: gunicorn classof2021site.wsgi:application --log-file -
+web: gunicorn ClassOf2021Site.wsgi:application --log-file -
