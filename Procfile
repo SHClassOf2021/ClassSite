@@ -1,1 +1,2 @@
-web: gunicorn ClassOf2021Site.wsgi:application --log-file -
+web: gunicorn ClassOf2021Site:application --log-file -
+web: gunicorn ClassOf2021Site:app --preload
