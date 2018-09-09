@@ -1,1 +1,1 @@
-web: python ClassOf2021Site.py
+web: gunicorn --chdir ClassOf2021Site wsgi.py:app
