@@ -1,1 +1,1 @@
-web: waitress-serve --port=$PORT ClassSite.wsgi:application
+web: gunicorn ClassOf2021Site.wsgi
