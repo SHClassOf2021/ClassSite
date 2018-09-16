@@ -1,1 +1,1 @@
-web: python manage.py run_gunicorn
+web: gunicorn ClassOf2021Site.wsgi.application
